@@ -1,0 +1,3 @@
+Test Bug:
+1.When there are only two players, of which the winning percentage are 100% and 0% the rankings reverse.
+2.Every time after a game loop ends the > mark on console will appear twice.// to be further tested

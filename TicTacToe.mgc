@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="Player" x="360" y="424">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="PlayerManager" x="117" y="159">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Player"
+            endpointName="players" kind="Simple"/>
+        <Communication destinationClassName="Player"/>
+    </Class>
+    <Class name="TicTacToe" x="515" y="79">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="GameMananger"
+            endpointName="gameMananger" kind="Simple"/>
+        <Association destinationClassName="PlayerManager"
+            endpointName="playerManager" kind="Simple"/>
+        <Communication destinationClassName="PlayerManager"/>
+        <Communication destinationClassName="GameMananger"/>
+    </Class>
+    <Class name="GameMananger" x="828" y="359">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Player" endpointName="p1" kind="Simple"/>
+        <Association destinationClassName="PlayerManager"
+            endpointName="playerManager" kind="Simple"/>
+        <Communication destinationClassName="Player"/>
+        <Communication destinationClassName="PlayerManager"/>
+    </Class>
+</ClassDiagram>
